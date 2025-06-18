@@ -41,6 +41,7 @@ class BaseTrainerEx(BaseTrainer):
                     data = []
                     out_data = []
                     for d in self.args.data:
+                        d = os.path.expandvars(d)   # convert env to real path name
                         data.append(check_det_dataset(d))
                         if "yaml_file" in data[-1]:
                             out_data.append(data[-1]["yaml_file"])  # for validating 'yolo train data=url.zip' usage
