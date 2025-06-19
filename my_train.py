@@ -1,4 +1,10 @@
+# for Monkey patch
+from extra.trainerEx import *
+from extra.trainEx import *
+
 from ultralytics import YOLO
+import cv2
+
 
 # Load a pretrained YOLO11n model
 model = YOLO("yolo11n.pt")
